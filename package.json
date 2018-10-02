@@ -1,0 +1,14 @@
+{
+  "name": "milapancakes",
+  "version": "1.0.0",
+  "description": "this a website about food",
+  "main": "index.js",
+  "scripts": {
+   "run:web" : "node-sass ./sass/main.scss  style.css -w"
+  },
+  "author": "Angel Rivera",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^4.0.1"
+  }
+}
