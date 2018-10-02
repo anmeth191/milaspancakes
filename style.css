@@ -53,7 +53,7 @@ html {
           font-size: 1.5rem; }
   .fullLayout .showcase {
     grid-column: full-start/full-end;
-    background: linear-gradient(to right bottom, rgba(16, 32, 39, 0.2), rgba(16, 32, 39, 0.4)), url("/Gallery/showcase3.jpeg");
+    background: linear-gradient(to right bottom, rgba(16, 32, 39, 0.2), rgba(16, 32, 39, 0.4)), url("./Gallery/showcase3.jpeg");
     background-position: center;
     background-size: cover;
     display: grid;
@@ -122,7 +122,7 @@ html {
       align-self: center; }
   .fullLayout .thirdSection {
     grid-column: full-start/full-end;
-    background: url("/Gallery/showcase2.jpeg");
+    background: url("./Gallery/showcase2.jpeg");
     background-position: center;
     background-size: cover; }
     .fullLayout .thirdSection .menuShow {
