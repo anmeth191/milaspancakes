@@ -8,7 +8,7 @@
   },
   "author": "Angel Rivera",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies":{
     "gulp-sass": "^4.0.1"
   }
 }

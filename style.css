@@ -40,15 +40,22 @@ html {
 .fullLayout {
   display: grid;
   grid-template-rows: minmax(min-content, 6rem) 95vh repeat(5, minmax(min-content, 20rem)) minmax(min-content, 6rem);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  transition: margin-left 0.3s ease-in;
+  overflow-x: hidden; }
   @media (max-width: 37.5em) {
     .fullLayout {
       grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1.5rem, 1fr) [full-end]; } }
   .fullLayout .header {
-    background: #ffab91;
+    background: #ffc107;
     display: grid;
     grid-column: full-start / full-end;
-    justify-items: center; }
+    justify-items: center;
+    position: fixed;
+    width: 100%; }
+    @media (max-width: 37.5em) {
+      .fullLayout .header {
+        padding: 2rem; } }
     .fullLayout .header .navbar {
       align-items: center;
       display: grid;
@@ -56,28 +63,61 @@ html {
       width: 80%; }
       @media (max-width: 37.5em) {
         .fullLayout .header .navbar {
-          grid-template-columns: 1fr;
-          text-align: center; } }
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          width: 100%; } }
       .fullLayout .header .navbar__logo--header {
         color: #000000;
         font-family: "Courgette", cursive;
         font-size: 3rem; }
+      @media (max-width: 37.5em) {
+        .fullLayout .header .navbar__listLinks {
+          display: none; } }
       .fullLayout .header .navbar__listLinks li {
         float: right;
         padding: 2rem;
-        list-style: none; }
-        @media (max-width: 37.5em) {
-          .fullLayout .header .navbar__listLinks li {
-            float: none;
-            padding: 0.5rem; } }
+        list-style: none;
+        transition: background 0.2s ease-in; }
+        .fullLayout .header .navbar__listLinks li:hover {
+          background: #c79100;
+          cursor: pointer; }
         .fullLayout .header .navbar__listLinks li .links {
           color: #000000;
           text-decoration: none;
           font-family: "Raleway", sans-serif;
           font-size: 1.5rem; }
+      .fullLayout .header .navbar__linkResponsive {
+        display: none;
+        position: relative;
+        left: 70%;
+        cursor: pointer; }
+        .fullLayout .header .navbar__linkResponsive:hover > .navbar__linkResponsive--bar1 {
+          transform: translateY(-0.3rem); }
+        .fullLayout .header .navbar__linkResponsive:hover > .navbar__linkResponsive--bar3 {
+          transform: translateY(0.3rem); }
+        @media (max-width: 37.5em) {
+          .fullLayout .header .navbar__linkResponsive {
+            display: block; } }
+        .fullLayout .header .navbar__linkResponsive--bar1, .fullLayout .header .navbar__linkResponsive--bar2, .fullLayout .header .navbar__linkResponsive--bar3 {
+          height: 0.4rem;
+          width: 4.5rem;
+          background: #102027;
+          position: absolute;
+          left: 0;
+          padding: 0.25rem;
+          transition: all 0.3s ease; }
+        .fullLayout .header .navbar__linkResponsive--bar1 {
+          top: -0.8rem; }
+        .fullLayout .header .navbar__linkResponsive--bar2 {
+          top: 0; }
+        .fullLayout .header .navbar__linkResponsive--bar3 {
+          top: 0.8rem; }
   .fullLayout .showcase {
+    height: 100vh;
     grid-column: full-start/full-end;
     background: linear-gradient(to right bottom, rgba(16, 32, 39, 0.2), rgba(16, 32, 39, 0.4)), url("../Gallery/showcase3.jpeg");
+    background: -webkit-linear-gradient(to right bottom, rgba(16, 32, 39, 0.2), rgba(16, 32, 39, 0.4)), url("../Gallery/showcase3.jpeg");
+    background: -o-linear-gradient(to right bottom, rgba(16, 32, 39, 0.2), rgba(16, 32, 39, 0.4)), url("../Gallery/showcase3.jpeg");
     background-position: center;
     background-size: cover;
     display: grid;
@@ -145,7 +185,7 @@ html {
       object-fit: cover; }
       @media (max-width: 37.5em) {
         .fullLayout .secondSection__image img {
-          height: 40rem; } }
+          height: 30rem; } }
     .fullLayout .secondSection__text {
       align-self: center;
       justify-self: center;
@@ -177,19 +217,16 @@ html {
       align-self: center; }
   .fullLayout .thirdSection {
     grid-column: full-start/full-end;
-    background: url("../Gallery/showcase2.jpeg");
+    background-image: url("../Gallery/showcase2.jpeg");
     background-position: center;
     background-size: cover; }
-    @media (max-width: 37.5em) {
-      .fullLayout .thirdSection {
-        padding: 2rem 0; } }
     .fullLayout .thirdSection .menuShow {
       width: 73.7%;
       margin: 0 auto;
       display: grid;
       justify-items: center;
       padding: 5rem;
-      background: rgba(55, 71, 79, 0.7); }
+      background: rgba(16, 32, 39, 0.7); }
       @media (max-width: 37.5em) {
         .fullLayout .thirdSection .menuShow {
           padding: 1rem;
@@ -245,7 +282,7 @@ html {
           color: #ffffff; }
   .fullLayout .information {
     grid-column: full-start/full-end;
-    background: #ffab91;
+    background: #ffc107;
     padding: 4rem;
     display: grid;
     justify-items: center; }
@@ -256,54 +293,66 @@ html {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-gap: 1rem;
+      grid-gap: 3rem;
       text-align: center;
       width: 80%; }
       @media (max-width: 37.5em) {
         .fullLayout .information__reviews {
           display: block;
-          margin: 0 auto; } }
+          margin: 0 auto;
+          width: 100%; } }
       .fullLayout .information__reviews--review1 {
         grid-column: 1/2;
         grid-row: 1/3;
-        align-self: center; }
-        .fullLayout .information__reviews--review1 img {
-          height: 31rem;
-          width: 55%;
-          object-fit: cover;
-          clip-path: circle(50% at 50%); }
+        align-self: center;
+        padding: 4rem 1rem; }
+        .fullLayout .information__reviews--review1 .img--review1 {
+          height: 35rem;
+          width: 35rem;
+          background: url("../Gallery/image2.jpeg");
+          background-size: cover;
+          background-position: center;
+          margin: 0 auto;
+          border-radius: 50%; }
           @media (max-width: 37.5em) {
-            .fullLayout .information__reviews--review1 img {
-              height: 24rem;
-              width: 100%; } }
+            .fullLayout .information__reviews--review1 .img--review1 {
+              height: 25rem;
+              width: 25rem; } }
       .fullLayout .information__reviews--review2 {
         grid-column: 2/3;
         grid-row: 1/2;
-        padding: 4rem 0; }
-        .fullLayout .information__reviews--review2 img {
-          height: 31rem;
-          width: 55%;
-          object-fit: cover;
-          clip-path: circle(50% at 50%); }
+        padding: 4rem 1rem; }
+        .fullLayout .information__reviews--review2 .img--review2 {
+          height: 35rem;
+          width: 35rem;
+          background: url("../Gallery/imagen3.jpeg");
+          background-size: cover;
+          background-position: center;
+          margin: 0 auto;
+          border-radius: 50%; }
           @media (max-width: 37.5em) {
-            .fullLayout .information__reviews--review2 img {
-              height: 24rem;
-              width: 100%; } }
+            .fullLayout .information__reviews--review2 .img--review2 {
+              height: 25rem;
+              width: 25rem; } }
       .fullLayout .information__reviews--review3 {
         grid-column: 2/3;
         grid-row: 2/3;
-        padding: 4rem 0; }
-        .fullLayout .information__reviews--review3 img {
-          height: 31rem;
-          width: 55%;
-          object-fit: cover;
-          clip-path: circle(50% at 50%); }
+        padding: 4rem 0;
+        text-align: center; }
+        .fullLayout .information__reviews--review3 .img--review3 {
+          height: 35rem;
+          width: 35rem;
+          background: url("../Gallery/imagen4.jpeg");
+          background-size: cover;
+          background-position: center;
+          margin: 0 auto;
+          border-radius: 50%; }
           @media (max-width: 37.5em) {
-            .fullLayout .information__reviews--review3 img {
-              height: 24rem;
-              width: 100%; } }
+            .fullLayout .information__reviews--review3 .img--review3 {
+              height: 25rem;
+              width: 25rem; } }
   .fullLayout .footer {
-    background: #ffab91;
+    background: #ffc107;
     grid-column: full-start/full-end;
     display: grid;
     align-items: center;
@@ -314,3 +363,54 @@ html {
       text-align: center; }
       .fullLayout .footer__icons--span {
         font-size: 1rem; }
+
+.sideBar {
+  background-color: rgba(16, 32, 39, 0.9);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  transition: all 0.3s ease-in;
+  width: 0;
+  opacity: 0;
+  bottom: 0; }
+  .sideBar__content {
+    width: 0;
+    height: 100%;
+    position: relative;
+    transition: all 0.1s ease-in; }
+    .sideBar__content #iconClose {
+      color: #ffc107;
+      font-size: 3rem;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      cursor: pointer; }
+    .sideBar__content--listLinks {
+      left: 50%;
+      list-style: none;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%; }
+      .sideBar__content--listLinks a:visited, .sideBar__content--listLinks a:link, .sideBar__content--listLinks a {
+        color: white;
+        display: none;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 1.5rem 12rem;
+        transition: all 0.3s ease-in; }
+        .sideBar__content--listLinks a:visited:hover, .sideBar__content--listLinks a:link:hover, .sideBar__content--listLinks a:hover {
+          background: #ffc107;
+          color: #102027;
+          font-size: 1.7rem; }
+
+.sideBarShow {
+  display: block;
+  opacity: 1;
+  width: 30rem; }
+
+.sideBarContentt {
+  opacity: 1;
+  width: 100%; }
+
+.fullLayoutLeft {
+  margin-left: 30rem; }

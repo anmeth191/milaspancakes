@@ -9,14 +9,16 @@
 
     <!--FONT FAMILIES-->
     <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet"> 
-
+    
+    
     <!--font awesome icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="icon-font.css">
+    
 </head>
 <body>
 
-<div class="fullLayout">
+<div id="fullLayout" class="fullLayout">
 
     <header class="header">
         <navbar class="navbar">
@@ -31,6 +33,12 @@
                 <li><a href="#" class="links">link4</a></li>
                 <li><a href="#" class="links">link5</a></li>
             </ul>
+
+            <div class="navbar__linkResponsive" id="sideNavLink"> 
+                <div class="navbar__linkResponsive--bar1"></div>
+                <div class="navbar__linkResponsive--bar2"></div>
+                <div class="navbar__linkResponsive--bar3"></div>
+            </div>
         </navbar>
     </header>
 
@@ -82,7 +90,7 @@
         <div class="information__reviews">
     
             <div class="information__reviews--review1">
-                  <img src="./Gallery/imagen10 .jpeg" alt="imagen review 1 año">
+                <div class="img--review1"></div>
                 <h3 class="title headerReview">Nutritivos</h3>
                 <span class="paragraph spanReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis consequatur beatae est dicta nostrum tempore repellat at recusandae molestias. Maiores dolore assumenda incidunt qui.
                 </span>
@@ -90,7 +98,7 @@
     
             
             <div class="information__reviews--review2">
-                    <img src="./Gallery/imagen11.jpeg" alt="imagen review 2 año">
+                <div class="img--review2"></div>
 
                     <h3 class="title headerReview">Deliciosos</h3>
                     <span class="paragraph spanReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis consequatur beatae est dicta nostrum tempore repellat at recusandae molestias. Maiores dolore assumenda incidunt qui.
@@ -99,7 +107,7 @@
     
                 
             <div class="information__reviews--review3">
-                    <img src="./Gallery/imagen12.jpeg" alt="imagen review 3año">
+                    <div class="img--review3"></div>
 
                     <h3 class="title headerReview">Los mejores</h3>
                     <span class="paragraph spanReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis consequatur beatae est dicta nostrum tempore repellat at recusandae molestias. Maiores dolore assumenda incidunt qui.
@@ -209,8 +217,8 @@
 <footer class="footer">
 
         <div class="footer__icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a><br>
+                <a href="https://www.instagram.com/milaspancakes/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/milaspancakes/"><i class="fab fa-facebook"></i></a><br>
                 <span class="footer__icons--span">Mila´s Pancakes Derechos Reservados</span>
         
         </div>
@@ -221,6 +229,22 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
 </div>
+
+<div class="sideBar" id="sideBar">
+<div id="sideBar__content" class="sideBar__content">
+        <i  id="iconClose" class="fas fa-times-circle"></i>
+        
+        <ul class="sideBar__content--listLinks">
+            <li><a class="linkSide links" href="#" >link1</a></li>
+            <li><a class="linkSide links" href="#" >link2</a></li>
+            <li><a class="linkSide links" href="#" >link3</a></li>
+            <li><a class="linkSide links" href="#" >link4</a></li>
+            <li><a class="linkSide links" href="#" >link5</a></li>
+        </ul>
+
+</div>
+
+</div> 
 <script src="main.js"></script>
 </body>
 </html>

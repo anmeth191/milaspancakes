@@ -1,0 +1,19 @@
+@import "variables";
+.title{
+    font-family: $first-font;
+    font-size: 4rem;
+    font-weight: $weight-title;
+    text-align: center;
+}
+
+.subtitle{
+    font-family: $second-font;
+    font-size: 2rem;
+    font-weight: $weight-title;
+}
+
+.paragraph{
+    font-family: $second-font;
+    font-size: 1.5rem;
+    font-weight: $weight-title;
+}

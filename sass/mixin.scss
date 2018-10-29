@@ -1,0 +1,24 @@
+//this is the mixin for the resposive web desing 
+
+/*
+breakpoint for differents devices 
+0-600px --> phone
+601px-900px --> tablet portrait
+901px-1200px --> tablet landscape
+1201px - more --> bigger devices 
+*/
+
+/*Breakpoints Names
+phone
+tab-por
+tab-land
+big-screen
+*/
+
+
+@mixin responsive($breakpoint){
+@if $breakpoint == phone{ @media(max-width:37.5em){@content}};
+@if $breakpoint == tab-port {@media(max-width:56.25em){@content}};
+@if $breakpoint == tab-land {@media(max-width:75em){@content}};
+@if $breakpoint == big-screen{@media(min-width:112em){@content}};
+}
