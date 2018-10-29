@@ -89,15 +89,12 @@ html {
       .fullLayout .header .navbar__linkResponsive {
         display: none;
         position: relative;
-        left: 70%;
-        cursor: pointer; }
+        cursor: pointer;
+        justify-self: center; }
         .fullLayout .header .navbar__linkResponsive:hover > .navbar__linkResponsive--bar1 {
           transform: translateY(-0.3rem); }
         .fullLayout .header .navbar__linkResponsive:hover > .navbar__linkResponsive--bar3 {
           transform: translateY(0.3rem); }
-        @media (max-width: 37.5em) {
-          .fullLayout .header .navbar__linkResponsive {
-            display: block; } }
         .fullLayout .header .navbar__linkResponsive--bar1, .fullLayout .header .navbar__linkResponsive--bar2, .fullLayout .header .navbar__linkResponsive--bar3 {
           height: 0.4rem;
           width: 4.5rem;
@@ -112,6 +109,9 @@ html {
           top: 0; }
         .fullLayout .header .navbar__linkResponsive--bar3 {
           top: 0.8rem; }
+        @media (max-width: 37.5em) {
+          .fullLayout .header .navbar__linkResponsive {
+            display: block; } }
   .fullLayout .showcase {
     height: 100vh;
     grid-column: full-start/full-end;
