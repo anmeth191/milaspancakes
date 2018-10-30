@@ -41,8 +41,7 @@ html {
   display: grid;
   grid-template-rows: minmax(min-content, 6rem) 95vh repeat(5, minmax(min-content, 20rem)) minmax(min-content, 6rem);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  transition: margin-left 0.3s ease-in;
-  overflow-x: hidden; }
+  transition: margin-left 0.3s ease-in; }
   @media (max-width: 37.5em) {
     .fullLayout {
       grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1.5rem, 1fr) [full-end]; } }
@@ -89,8 +88,12 @@ html {
       .fullLayout .header .navbar__linkResponsive {
         display: none;
         position: relative;
-        cursor: pointer;
-        justify-self: center; }
+        cursor: pointer; }
+        @media (max-width: 37.5em) {
+          .fullLayout .header .navbar__linkResponsive {
+            display: block;
+            left: 80%;
+            top: 0; } }
         .fullLayout .header .navbar__linkResponsive:hover > .navbar__linkResponsive--bar1 {
           transform: translateY(-0.3rem); }
         .fullLayout .header .navbar__linkResponsive:hover > .navbar__linkResponsive--bar3 {
@@ -100,7 +103,6 @@ html {
           width: 4.5rem;
           background: #102027;
           position: absolute;
-          left: 0;
           padding: 0.25rem;
           transition: all 0.3s ease; }
         .fullLayout .header .navbar__linkResponsive--bar1 {
@@ -109,9 +111,6 @@ html {
           top: 0; }
         .fullLayout .header .navbar__linkResponsive--bar3 {
           top: 0.8rem; }
-        @media (max-width: 37.5em) {
-          .fullLayout .header .navbar__linkResponsive {
-            display: block; } }
   .fullLayout .showcase {
     height: 100vh;
     grid-column: full-start/full-end;
