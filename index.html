@@ -3,14 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Milla´s Pancakes</title>
+    <title>milaspancakes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
+    <!--LINK FOR GOOGLE SERCH ENGINE CONSOLE-->
+        <meta name="google-site-verification" content="gubIXwigCliebgwa7a07nvXCRZdi82ifyVZVfmJfhzs" />
+
+    <!--HEAD TAB ICON-->
+
+    <link rel="icon" href="Gallery/pancakeicon3.png">
+
     <!--FONT FAMILIES-->
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet"> 
-    
-    
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet">   
+    <!---JQUERY CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+
+
     <!--font awesome icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="icon-font.css">
@@ -20,18 +30,18 @@
 
 <div id="fullLayout" class="fullLayout">
 
-    <header class="header">
+    <header  class="header">
         <navbar class="navbar">
             <div class="navbar__logo">
-                <h2 class="navbar__logo--header">Logo</h2>
+                <h2 class="navbar__logo--header">Mila´s</h2>
             </div>
 
             <ul class="navbar__listLinks">
-                <li><a href="#" class="links">link1</a></li>
-                <li><a href="#" class="links">link2</a></li>
-                <li><a href="#" class="links">link3</a></li>
-                <li><a href="#" class="links">link4</a></li>
-                <li><a href="#" class="links">link5</a></li>
+                <li><a href="#contacto" class="links">Contacto</a></li>
+                <li><a href="#galeria" class="links">Galeria</a></li>
+                <li><a href="#menu" class="links">Menu</a></li>
+                <li><a href="#bienvenido" class="links">Bienvenido</a></li>
+                <li><a href="#inicio" class="links">Inicio</a></li>
             </ul>
 
             <div class="navbar__linkResponsive" id="sideNavLink"> 
@@ -46,12 +56,12 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
-<div class="showcase">
+<div id="inicio" class="showcase scrollspy">
 
 
     <div class="showcase__message">
-      <h1 class="showcase__message--heading">Mila´s Pancakes</h1>
-       <h3 class="showcase__message--subHeading">Esto es un Subtitulo</h3>
+      <h1 class="showcase__message--heading" id="showcaseTitle">Mila´s Pancakes</h1>
+       <h3 class="showcase__message--subHeading" id="showcaseSubTitle">Hechos con amor</h3>
     </div>
 </div>
 
@@ -59,24 +69,23 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
-<div class="firstSection">
+<div id="bienvenido" class="firstSection scrollspy">
 
     <div class="firstSection__content">
         <div class="firstSection__content--message">
-           <h2 class="firstSection__content--message--header title">Hello</h2>
-            <h4 class="firstSection__content--message--subHeader subtitle">This is an Introduction</h4>
-            <p class="firstSection__content--message--paragraph paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure error cum quaerat pariatur amet. Ea sequi quaerat harum vero autem placeat voluptatem odio cupiditate at, quasi impedit ab ullam rerum dignissimos, totam dolorum consequuntur illum odit dicta reprehenderit incidunt voluptatibus! Ex asperiores architecto quo quas eius enim praesentium aliquam molestiae!</p>
+           <h2 class="firstSection__content--message--header title">Bienvenidos</h2>
+            <p class="firstSection__content--message--paragraph paragraph">Si estás en búsqueda de un alimento perfecto para empezar tu día, nuestros deliciosos y saludables pancakes son la opción perfecta. Elaborados con la mejor combinación de ingredientes que te harán sentir saludable y lleno de energías. </p>
         </div>
     </div>
         
 
    <div class="firstSection__images">
        <div class="firstSection__images--container">
-           <img src="./Gallery/image1.jpg" alt="image 1 in the first Section">
+           <img src="./Gallery/imagen13.jpg" alt="image 1 in the first Section">
         </div>
            
         <div class="firstSection__images--container">
-            <img src="./Gallery/image2.jpeg" alt="image 2 in the first section">
+            <img src="./Gallery/imagen16.jpg" alt="image 2 in the first section">
             </div>
    </div>
 </div>
@@ -89,28 +98,28 @@
 
         <div class="information__reviews">
     
-            <div class="information__reviews--review1">
+            <div class="information__reviews--review1" id="review1">
                 <div class="img--review1"></div>
                 <h3 class="title headerReview">Nutritivos</h3>
-                <span class="paragraph spanReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis consequatur beatae est dicta nostrum tempore repellat at recusandae molestias. Maiores dolore assumenda incidunt qui.
+                <span class="paragraph spanReview">Aparte del rico sabor que tienen nuestros pancakes, están hechos a base de avena, leche 0% grasa y 0 azúcar, por lo cual no les caerán pesados a tu estómago. 
                 </span>
             </div>
     
             
-            <div class="information__reviews--review2">
+            <div class="information__reviews--review2" id="review2">
                 <div class="img--review2"></div>
 
                     <h3 class="title headerReview">Deliciosos</h3>
-                    <span class="paragraph spanReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis consequatur beatae est dicta nostrum tempore repellat at recusandae molestias. Maiores dolore assumenda incidunt qui.
+                    <span class="paragraph spanReview">Acompañados con miel de abeja 100% natural y frutas frescas de temporada, harán que tu desayuno sea tu comida favorita del día.   
                     </span>
                 </div>
     
                 
-            <div class="information__reviews--review3">
+            <div class="information__reviews--review3" id="review3">
                     <div class="img--review3"></div>
 
                     <h3 class="title headerReview">Los mejores</h3>
-                    <span class="paragraph spanReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis consequatur beatae est dicta nostrum tempore repellat at recusandae molestias. Maiores dolore assumenda incidunt qui.
+                    <span class="paragraph spanReview">Nos diferenciamos por ser elaborados con ingredientes 100% naturales, siempre en pro de la buena alimentación. Además, que están elaborados con nuestro ingrediente principal y el que nunca falta: mucho amor ! 
                     </span>
                 </div>
         </div>
@@ -121,29 +130,31 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
-<div class="menu">
+<div id="menuResponsive"  class="menu scrollspy">
 
     <div class="menu__images">
       <div class="menu__images--photos">
-          <img src="./Gallery/imagen6.jpg" alt="imagen menu">
+          <img src="./Gallery/photo1.jpeg" alt="imagen menu">
       </div>
     
       <div class="menu__images--photos">
-            <img src="./Gallery/imagen7.jpg" alt="imagen menu">
+            <img src="./Gallery/photo5.jpeg" alt="imagen menu">
         </div>
 
         <div class="menu__images--photos">
-                <img src="./Gallery/imagen8.jpg" alt="imagen menu">
+                <img src="./Gallery/photo6.jpeg" alt="imagen menu">
             </div>
          
             <div class="menu__images--photos">
-                    <img src="./Gallery/imagen9.jpg" alt="imagen menu">
+                    <img src="./Gallery/photo4.jpeg" alt="imagen menu">
                 </div>
                  </div>
 
     <div class="menu__content">
             <h2 class="menu__content--header title">Mis Pancakes</h2>
-            <p class="menu__content--content paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dolores velit officiis quisquam accusantium laborum dicta labore et nesciunt placeat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi rem laudantium est repellat vitae, provident totam dolore maiores placeat esse non nihil perferendis sed nam voluptates harum consequatur aut? Vitae!</p>
+            <p class="menu__content--content paragraph">
+                En el 2018, motivada por el ejercicio y la buena alimentación decidí comenzar a ingerir todos mis alimentos de origen natural y que me ayudaran a alcanzar mis objetivos y al ser amante de los pancakes, por supuesto que tenía que reinventarme una receta natural de estos. Al tenerla lista, decidí comercializarlos para que todos pudiéramos disfrutar de su sabor.
+                  </p>
         </div>
     
 </div>
@@ -152,7 +163,7 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
-<div class="thirdSection">
+<div id="menu" class="thirdSection scrollspy">
 
     <div class="menuShow">
         
@@ -163,6 +174,8 @@
           <tr><td>Pancakes de Cocoa</td><td>C$ 120.00</td></tr>
           <tr><td>Pancakes de Canela</td><td>C$ 120.00</td></tr>
           <tr><td>Pancakes Mixtos</td><td>C$ 125.00</td></tr>
+          <tr><td>Coffee Pancakes</td><td>C$ 150.00</td></tr>
+
       </table>    
 
 </div>
@@ -179,19 +192,118 @@
         </div>
 
        <div class="menuShow__message">
-           <span class="menuShow__message--span paragraph">
+           <span class="menuShow__message--span ">
                Nuestras deliciosa orden incluye: 3 pancakes hechos a base de avena y leche 0% grasa , acompañados con miel , mermelada 100% natural y banano. 
            </span>
        </div>
     </div>
 </div>
-
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
 
-<div class="secondSection">
+<div id="galeria" class="gallery scrollspy">
+<figure class="gallery__item--1">
+    <img src="./Gallery/foto-gallery/imagen1.jpg" alt="imagen gallery 1" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--2">
+    <img src="./Gallery/foto-gallery/imagen2.jpg" alt="imagen gallery 2" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--3">
+    <img src="./Gallery/foto-gallery/imagen3.jpg" alt="imagen gallery 3" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--4">
+    <img src="./Gallery/foto-gallery/imagen4.jpg" alt="imagen gallery 4" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--5">
+    <img src="./Gallery/foto-gallery/imagen5.jpg" alt="imagen gallery 5" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--6">
+    <img src="./Gallery/foto-gallery/imagen6.jpg" alt="imagen gallery 6" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--7">
+    <img src="./Gallery/foto-gallery/imagen7.jpg" alt="imagen gallery 7" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--8">
+    <img src="./Gallery/foto-gallery/imagen8.jpg" alt="imagen gallery 8" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--9">
+    <img src="./Gallery/foto-gallery/imagen9.jpg" alt="imagen gallery 9" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--10">
+    <img src="./Gallery/foto-gallery/imagen10.jpg" alt="imagen gallery 10" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--11">
+    <img src="./Gallery/foto-gallery/imagen11.jpg" alt="imagen gallery 11" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--12">
+    <img src="./Gallery/foto-gallery/imagen12.jpg" alt="imagen gallery 12" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--13">
+    <img src="./Gallery/foto-gallery/imagen13.jpg" alt="imagen gallery 13" class="gallery__image">
+</figure>
+
+
+
+<figure class="gallery__item--14">
+    <img src="./Gallery/foto-gallery/imagen14.jpg" alt="imagen gallery 14" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--15">
+    <img src="./Gallery/foto-gallery/imagen15.jpg" alt="imagen gallery 15" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--16">
+    <img src="./Gallery/foto-gallery/imagen16.jpg" alt="imagen gallery 16" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--17">
+    <img src="./Gallery/foto-gallery/imagen17.jpg" alt="imagen gallery 17" class="gallery__image">
+</figure>
+
+
+<figure class="gallery__item--18">
+    <img src="./Gallery/foto-gallery/imagen18.jpg" alt="imagen gallery 18" class="gallery__image">
+</figure>
+
+
+
+
+</div>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--> 
+
+<div id="contacto" class="secondSection scrollspy">
 
         <div class="secondSection__image">
             <img src="./Gallery/logo.jpg" alt="second section imagen 1">
@@ -199,11 +311,11 @@
         
         
         <div class="secondSection__text">
-               <span class="paragraph"> Precio Incluye Delivery <br>
-            Horario de Atencion: 9:00 AM - 3:00 PM <br> 
-        Pedidos con un dia de anticipacion <br>
-        Servicio desayuno delivery , Managua - Nicaragua <br>
-         Telefono: +505-8511-9152
+               <span class="paragraph"> Precio de delivery varía según la zona de envío <br> 
+            Entrega de pedidos de 6:30 AM - 9:00 AM<br>
+            Pedidos con un dia de anticipacion <br>
+             Managua - Nicaragua <br>
+             Telefono: +505-8511-9152
     </span>
             </div>
     
@@ -235,16 +347,44 @@
         <i  id="iconClose" class="fas fa-times-circle"></i>
         
         <ul class="sideBar__content--listLinks">
-            <li><a class="linkSide links" href="#" >link1</a></li>
-            <li><a class="linkSide links" href="#" >link2</a></li>
-            <li><a class="linkSide links" href="#" >link3</a></li>
-            <li><a class="linkSide links" href="#" >link4</a></li>
-            <li><a class="linkSide links" href="#" >link5</a></li>
+            <li><a class="linkSide links" href="#inicio" >Inicio</a></li>
+            <li><a class="linkSide links" href="#bienvenido" >Bienvenido</a></li>
+            <li><a class="linkSide links" href="#menuResponsive" >Menu</a></li>
+            <li><a class="linkSide links" href="#menu" >Galeria</a></li>
+            <li><a class="linkSide links" href="#contacto" >Contacto</a></li>
         </ul>
 
 </div>
 
 </div> 
+
+<div class="galleryModal">
+
+    <i id="iconClose" class="fas fa-times galleryModal__icon"></i>
+
+    <i class="fas fa-arrow-right galleryModal__right" id="right"></i>
+    <figure class="galleryModal__photo" id="photoModal">
+    <img src="./Gallery/foto-gallery/imagen11.jpg"   alt="gallery modal photo" class="galleryModal__photo--image">
+    <i class="fas fa-arrow-left galleryModal__left" id="left"></i>
+    </figure>
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="main.js"></script>
+<script src="gallery.js"></script>
+<script src="animations.js"></script>
+<script>
+      $(document).ready(function(){
+    $('.scrollspy').scrollSpy(
+        {
+            scrollOffset:60
+        }
+    );
+  });
+</script>
+
 </body>
 </html>

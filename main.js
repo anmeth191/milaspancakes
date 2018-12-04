@@ -23,3 +23,5 @@ sideBarClose.addEventListener('click' , () => {
     let linkSide = document.querySelectorAll('.linkSide');
    linkSide.forEach(element => {element.style.display = 'none'})
 })
+
+

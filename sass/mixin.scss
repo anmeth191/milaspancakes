@@ -22,3 +22,13 @@ big-screen
 @if $breakpoint == tab-land {@media(max-width:75em){@content}};
 @if $breakpoint == big-screen{@media(min-width:112em){@content}};
 }
+
+
+//animation mixin
+
+@mixin animation {
+    position: relative;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    opacity:0;
+}

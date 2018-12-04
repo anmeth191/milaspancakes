@@ -1,19 +1,30 @@
 @import "variables";
+@import "mixin";
 .title{
     font-family: $first-font;
-    font-size: 4rem;
+    font-size: 5.5rem;
     font-weight: $weight-title;
     text-align: center;
+
+    @include responsive(tab-port){font-size: 4.5rem;}
+    @include responsive(phone){font-size: 4rem;}
+
 }
 
 .subtitle{
     font-family: $second-font;
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: $weight-title;
+
+    
 }
 
 .paragraph{
     font-family: $second-font;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: $weight-title;
+    
+    @include responsive(tab-port){font-size: 1.5rem;}
+    @include responsive(phone){font-size: 1.5rem;}
+    
 }
